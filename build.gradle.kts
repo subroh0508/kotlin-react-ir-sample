@@ -11,6 +11,13 @@ repositories {
 }
 
 dependencies {
+    implementation(Libraries.Serialization.core)
+    implementation(Libraries.Coroutine.core)
+    implementation(Libraries.Ktor.client)
+    implementation(Libraries.Ktor.json)
+    implementation(Libraries.Ktor.serialization)
+    implementation(Libraries.Koin.core)
+
     val wrappers = Libraries.JsWrappers(kotlinVersion)
     implementation(wrappers.react)
     implementation(wrappers.reactDom)
