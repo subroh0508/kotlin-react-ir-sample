@@ -4,21 +4,21 @@ object Libraries {
     object Serialization {
         private const val version = "1.2.1"
 
-        const val core = "org.jetbrains.kotlinx:kotlinx-serialization-json-js:$version"
+        const val core = "org.jetbrains.kotlinx:kotlinx-serialization-json:$version"
     }
 
     object Coroutine {
         private const val version = "1.5.0"
 
-        const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:$version"
+        const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
     }
 
     object Ktor {
         private const val version = "1.6.0"
 
-        const val client = "io.ktor:ktor-client-js:$version"
-        const val json = "io.ktor:ktor-client-json-js:$version"
-        const val serialization = "io.ktor:ktor-client-serialization-js:$version"
+        const val client = "io.ktor:ktor-client-core:$version"
+        const val json = "io.ktor:ktor-client-json:$version"
+        const val serialization = "io.ktor:ktor-client-serialization:$version"
     }
 
     object Koin {

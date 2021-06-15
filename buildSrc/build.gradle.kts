@@ -16,4 +16,5 @@ fun version(target: String) = props.getProperty("${target}.version")
 
 dependencies {
     implementation(kotlin("gradle-plugin", version("kotlin")))
+    implementation(kotlin("serialization", version("kotlin")))
 }
