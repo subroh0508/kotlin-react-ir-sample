@@ -12,7 +12,7 @@ val koinApp = koinApplication {
 fun main() {
     window.onload = {
         render(document.getElementById("root"), callback = {}) {
-            child(IdolsPage::class) {}
+            IdolsPageComponent()
         }
     }
 }

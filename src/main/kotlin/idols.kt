@@ -13,15 +13,15 @@ import org.koin.core.component.newScope
 import org.koin.core.scope.Scope
 import org.koin.dsl.module
 import org.w3c.dom.HTMLInputElement
-import react.RBuilder
-import react.RComponent
-import react.RProps
-import react.RState
+import react.*
 import react.dom.*
 import styled.css
 import styled.styledHr
 import styled.styledInput
 import viewmodel.IdolsViewModel
+
+@Suppress("FunctionName")
+fun RBuilder.IdolsPageComponent() = child(functionComponent { child(IdolsPage::class) {} })
 
 data class IdolsState(
     val items: List<Idol> = listOf(),
@@ -31,24 +31,14 @@ data class IdolsState(
 ) : RState
 
 @JsExport
-class IdolsPage : RComponent<RProps, IdolsState>(), KoinScopeComponent, CoroutineScope by MainScope() {
-    override fun getKoin() = koinApp.koin
-    override val scope: Scope by newScope()
-
-    private val module = module {
+class IdolsPage : KoinReactComponent<RProps, IdolsState>(
+    module {
         scope<IdolsPage> {
             scoped { IdolsViewModel(get()) }
         }
-    }
-
-    init {
-        getKoin().loadModules(listOf(module))
-        state = IdolsState()
-    }
-
-    override fun componentWillUnmount() {
-        getKoin().unloadModules(listOf(module))
-    }
+    },
+) {
+    init { state = IdolsState() }
 
     private val viewModel: IdolsViewModel by inject()
 
