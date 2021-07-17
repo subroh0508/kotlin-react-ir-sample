@@ -32,6 +32,7 @@ kotlin {
         browser {
             commonWebpackConfig {
                 cssSupport.enabled = true
+                sourceMaps = true
             }
         }
     }

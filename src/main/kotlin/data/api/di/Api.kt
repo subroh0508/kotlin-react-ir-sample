@@ -19,7 +19,8 @@ object Api {
         single<ImasparqlClient> { ImasparqlApiClient(get()) }
     }
 
-    private const val HOSTNAME = "sparql.crssnky.xyz"
+    const val HOSTNAME = "sparql.crssnky.xyz"
+
     private val client get() = HttpClient(Js) {
         defaultRequest {
             url {
