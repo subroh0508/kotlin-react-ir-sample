@@ -2,19 +2,19 @@
 
 object Libraries {
     object Serialization {
-        private const val version = "1.2.1"
+        private const val version = "1.2.2"
 
         const val core = "org.jetbrains.kotlinx:kotlinx-serialization-json:$version"
     }
 
     object Coroutine {
-        private const val version = "1.5.0"
+        private const val version = "1.5.1"
 
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
     }
 
     object Ktor {
-        private const val version = "1.6.0"
+        private const val version = "1.6.1"
 
         const val client = "io.ktor:ktor-client-core:$version"
         const val json = "io.ktor:ktor-client-json:$version"
@@ -22,7 +22,7 @@ object Libraries {
     }
 
     object Koin {
-        private const val version = "3.0.2"
+        private const val version = "3.1.2"
 
         const val core = "io.insert-koin:koin-core:$version"
     }
@@ -33,7 +33,7 @@ object Libraries {
     }
 
     class JsWrappers(kotlinVersion: String) {
-        private val wrappersBuild = "pre.211-kotlin-$kotlinVersion"
+        private val wrappersBuild = "pre.217-kotlin-$kotlinVersion"
 
         private val reactVersion = "${Npm.react}-$wrappersBuild"
         val react = "org.jetbrains.kotlin-wrappers:kotlin-react:$reactVersion"
